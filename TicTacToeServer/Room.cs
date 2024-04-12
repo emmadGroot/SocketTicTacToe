@@ -10,7 +10,7 @@ namespace TicTacToeServer
     {
         public string roomName;
 
-        public List<Socket> players = new List<Socket>();
+        public List<Socket> players = [];
 
         public char[,] grid = new char[3, 3];
         static public readonly int[,] magic = new int[3, 3];

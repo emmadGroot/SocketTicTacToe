@@ -11,10 +11,8 @@ namespace TicTacToeServer
 {
     internal class Program
     {
-        static List<Room> rooms = new List<Room>();
-        static List<Socket> clients = new List<Socket>();
-
-        
+        static List<Room> rooms = [];
+        static List<Socket> clients = [];
 
         static Socket serverSocket;
 
