@@ -101,13 +101,13 @@ namespace TicTacToeServer
                         if (CheckForWin(c, row, col))
                         {
                             Broadcast($"VICTORY {c}");
-                            Console.WriteLine("! Ending game due to victory");
+                            Console.WriteLine($"! [ROOM: {roomName}] Ending game due to victory");
                             EndGame();
                         }
                         else if (turncounter == 9)
                         {
                             Broadcast("DRAW");
-                            Console.WriteLine("! Ending game due to a draw");
+                            Console.WriteLine($"! [ROOM: {roomName}] Ending game due to a draw");
                             EndGame();
                         }
 
@@ -143,7 +143,7 @@ namespace TicTacToeServer
         // Determine if there's a winner using a magic square (more info @ https://mathworld.wolfram.com/MagicSquare.html)
         public bool CheckForWin(char player, int row, int column)
         {
-            Console.WriteLine("? Checking for winner");
+            Console.WriteLine($"? [ROOM: {roomName}] Checking for winner");
 
             // there can't be a winner until turn 5
             if (turncounter <= 4) return false;
